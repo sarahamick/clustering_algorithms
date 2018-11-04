@@ -10,7 +10,9 @@ public class KMeanCluster {
 	private List<Iris> clusterMembers;
 	private float[] mean;
 
-	
+	/**
+	 * @author: Sarah Amick
+	 */
 	public KMeanCluster() {
 		this.clusterMembers = new ArrayList<>();
 	}
@@ -76,7 +78,7 @@ public class KMeanCluster {
 			toPrintString += i.toString() + System.getProperty("line.separator");
 		}
 		toPrintString += "-----------------------------------CLUSTER END-------------------------------------------" + System.getProperty("line.separator");
-		
+
 		return toPrintString;
 	}
 

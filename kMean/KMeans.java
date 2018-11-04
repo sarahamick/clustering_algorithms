@@ -3,7 +3,9 @@ import java.util.*;
 
 import data.*;
 
-
+/**
+ * @author: Sarah Amick
+ */
 public class KMeans {
 
 	private int k;
@@ -23,12 +25,13 @@ public class KMeans {
 		updateMeans();
 		recluster(1);
 
-		//TODO: calculate difference matrix for data irises from each other
-		//TODO: select random first k irises
-		//TODO: partition remaining N-k irises into clusters using difference matrix
-		//TODO: calculate new mean of clusters
-		//TODO: calculate difference matrix for data irises from the new mean
-		//TODO: repartition based on second difference matrix
+		//Algorithm description:
+		//1. calculate difference matrix for data irises from each other
+		//2. select random first k irises
+		//3. partition remaining N-k irises into clusters using difference matrix
+		//4. calculate new mean of clusters
+		//5. calculate difference matrix for data irises from the new mean
+		//6. repartition based on second difference matrix
 
 		List<KMeanCluster> finalClusters = new ArrayList<>();
 		for(KMeanCluster cluster : clusters.values()){

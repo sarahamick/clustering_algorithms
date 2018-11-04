@@ -10,21 +10,20 @@ import data.*;
 public class Main {
 
 	/**
-	 * @param args
+	 * @author: Sarah Amick
 	 */
 	public static void main(String[] args) {
-		//First step --> load in iris data
+		//Load iris data
 		ArrayList<Iris> irisData = DataLoader.LoadAllIrisData();
-		
-		//Second step --> do the clustering using k-means!
+
+		//Clustering using k-means
 		KMeans kMeans = new KMeans(irisData);
 		List<KMeanCluster> foundClusters_KMeans = kMeans.KMeansPartition(3);
 
 		for(KMeanCluster cluster : foundClusters_KMeans){
-
 			System.out.println(cluster);
 		}
-		//Third step --> do the clustering using k-medoids!
+		//Clustering using k-medoids
 		ArrayList<KMedoidCluster> FoundClusters_KMedoids = KMedoid.KMedoidPartition(3, irisData);
 	}
 
